@@ -1,6 +1,6 @@
 # Project 0 - Reference Material and Submitting Projects[^1]
 
-## Introduction
+## Introductionn
 
 The projects for this class assume you can do the following:
 - Use a *CLI* (command line interface) to perform system level functions
