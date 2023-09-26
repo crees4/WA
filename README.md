@@ -1,11 +1,11 @@
 # Course Syllabus - Web Applications
 
 ## Basic Information
-*Course ID:* COSC 335
+*Course ID:* CSC 335
 
 *Term:* Spring 2023
 
-*Professor:* Todd Dobbs, dobbsbt@wofford.edu
+*Professor:* Todd Dobbs, btdobbs@uncc.edu
 
 *Class Schedule:* Tuesday and Thursday from 9:30 am to 10:50 am in Olin 213
 
