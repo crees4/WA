@@ -81,7 +81,7 @@ I encourage you to try to be less worried about grades than you are. If you focu
 | 6    | 11  | Tue Mar 14   | [SPA](https://github.com/btdobbs/WA/blob/main/Topic/11.md)                                           |                                                                     |
 |      | 12  | Thu Mar 16   | [RWD](https://github.com/btdobbs/WA/blob/main/Topic/12.md)                                           |                                                                     |
 | 7    | 13  | Tue Mar 21   | [Web Application Construction](https://github.com/btdobbs/WA/blob/main/Topic/13.md)                  |                                                                     |
-|      | 14  | Thu Mar 23   | [Browser-Server Communcation](https://github.com/btdobbs/WA/blob/main/Topic/14.md)                   | [4 Due](https://github.com/btdobbs/WA/tree/main/Project/04)         |
+|      | 14  | Thu Mar 23   | [Browser-Server Communication](https://github.com/btdobbs/WA/blob/main/Topic/14.md)                   | [4 Due](https://github.com/btdobbs/WA/tree/main/Project/04)         |
 | 8    | 15  | Tue Mar 28   | [Web Server](https://github.com/btdobbs/WA/blob/main/Topic/15.md)                                    |                                                                     |
 |      | 16  | Thu Mar 30   | [Node.js](https://github.com/btdobbs/WA/blob/main/Topic/16.md)                                       | [5 Due](https://github.com/btdobbs/WA/tree/main/Project/05)         |
 |      |     | Tue Apr 4    | Spring Holiday                                                                                       |                                                                     |
