@@ -1,7 +1,7 @@
 /**
  * This builds on the webServer of previous projects in that it exports the
  * current directory via webserver listing on a hard code (see portno below)
- * port. It also establishes a connection to the MongoDB named 'cs142project6'.
+ * port. It also establishes a connection to the MongoDB named 'project6'.
  *
  * To start the webserver run the command:
  *    node webServer.js
@@ -16,7 +16,7 @@
  * /test        - Returns the SchemaInfo object of the database in JSON format.
  *                This is good for testing connectivity with MongoDB.
  * /test/info   - Same as /test.
- * /test/counts - Returns the population counts of the cs142 collections in the
+ * /test/counts - Returns the population counts of the cs collections in the
  *                database. Format is a JSON object with properties being the
  *                collection name and the values being the counts.
  *
@@ -46,9 +46,9 @@ const SchemaInfo = require("./schema/schemaInfo.js");
 
 // XXX - Your submission should work without this line. Comment out or delete
 // this line for tests and before submission!
-const cs142models = require("./modelData/photoApp.js").cs142models;
+const models = require("./modelData/photoApp.js").models;
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://127.0.0.1/cs142project6", {
+mongoose.connect("mongodb://127.0.0.1/project6", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -143,7 +143,7 @@ app.get("/test/:p1", function (request, response) {
  * URL /user/list - Returns all the User objects.
  */
 app.get("/user/list", function (request, response) {
-  response.status(200).send(cs142models.userListModel());
+  response.status(200).send(models.userListModel());
 });
 
 /**
@@ -151,7 +151,7 @@ app.get("/user/list", function (request, response) {
  */
 app.get("/user/:id", function (request, response) {
   const id = request.params.id;
-  const user = cs142models.userModel(id);
+  const user = models.userModel(id);
   if (user === null) {
     console.log("User with _id:" + id + " not found.");
     response.status(400).send("Not found");
@@ -165,7 +165,7 @@ app.get("/user/:id", function (request, response) {
  */
 app.get("/photosOfUser/:id", function (request, response) {
   const id = request.params.id;
-  const photos = cs142models.photoOfUserModel(id);
+  const photos = models.photoOfUserModel(id);
   if (photos.length === 0) {
     console.log("Photos for user with _id:" + id + " not found.");
     response.status(400).send("Not found");
