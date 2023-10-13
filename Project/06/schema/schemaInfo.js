@@ -1,12 +1,11 @@
 "use strict";
-/* jshint node: true */
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 /**
- * Create a Mongoos Schema.
+ * Create a Mongoose Schema.
  */
-var schemaInfo = new mongoose.Schema({
+const schemaInfo = new mongoose.Schema({
     version: String,
     load_date_time: {type: Date, default: Date.now},
 });
@@ -14,7 +13,7 @@ var schemaInfo = new mongoose.Schema({
 /**
  * Create a Mongoose Model.
  */
-var SchemaInfo = mongoose.model('SchemaInfo', schemaInfo);
+const SchemaInfo = mongoose.model('SchemaInfo', schemaInfo);
 
 /**
  * Make this available to our application.
