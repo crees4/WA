@@ -1,16 +1,16 @@
 /**
- * This Node.js program loads the CS142 Project 6 model data into Mongoose
+ * This Node.js program loads the Project 6 model data into Mongoose
  * defined objects in a MongoDB database. It can be run with the command:
  *     node loadDatabase.js
  * be sure to have an instance of the MongoDB running on the localhost.
  *
- * This script loads the data into the MongoDB database named 'cs142project6'.
+ * This script loads the data into the MongoDB database named 'project6'.
  * In loads into collections named User and Photos. The Comments are added in
  * the Photos of the comments. Any previous objects in those collections is
  * discarded.
  *
  * NOTE: This scripts uses Promise abstraction for handling the async calls to
- * the database. We are not teaching Promises in CS142 so strongly suggest you
+ * the database. We are not teaching Promises in CS so strongly suggest you
  * don't use them in your solution.
  */
 
@@ -18,13 +18,13 @@
 const mongoose = require("mongoose");
 mongoose.Promise = require("bluebird");
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://127.0.0.1/cs142project6", {
+mongoose.connect("mongodb://127.0.0.1/project6", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
 // Get the magic models we used in the previous projects.
-const cs142models = require("./modelData/photoApp.js").cs142models;
+const models = require("./modelData/photoApp.js").models;
 
 // Load the Mongoose schema for Use and Photo
 const User = require("./schema/user.js");
@@ -43,10 +43,10 @@ const removePromises = [
 Promise.all(removePromises)
   .then(function () {
     // Load the users into the User. Mongo assigns ids to objects so we record
-    // the assigned '_id' back into the cs142model.userListModels so we have it
+    // the assigned '_id' back into the model.userListModels so we have it
     // later in the script.
 
-    const userModels = cs142models.userListModel();
+    const userModels = models.userListModel();
     const mapFakeId2RealId = {};
     const userPromises = userModels.map(function (user) {
       return User.create({
@@ -82,7 +82,7 @@ Promise.all(removePromises)
       const photoModels = [];
       const userIDs = Object.keys(mapFakeId2RealId);
       userIDs.forEach(function (id) {
-        photoModels.push(...cs142models.photoOfUserModel(id));
+        photoModels.push(...models.photoOfUserModel(id));
       });
 
       const photoPromises = photoModels.map(function (photo) {
