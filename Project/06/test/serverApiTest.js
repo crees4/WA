@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Mocha test of CS142 Project 6 web API.  To run type
+ * Mocha test of Project 6 web API.  To run type
  *   node_modules/.bin/mocha serverApiTest.js
  */
 
@@ -11,7 +11,7 @@ const async = require("async");
 const _ = require("lodash");
 const fs = require("fs");
 
-const cs142models = require("../modelData/photoApp.js").cs142models;
+const models = require("../modelData/photoApp.js").models;
 
 const port = 3000;
 const host = "localhost";
@@ -45,16 +45,16 @@ function removeMongoProperties(model) {
   return model;
 }
 
-describe("CS142 Photo App: Web API Tests", function () {
+describe("Photo App: Web API Tests", function () {
   describe("test using model data", function (done) {
     it("webServer does not use model data", function (done) {
       fs.readFile("../webServer.js", function (err, data) {
         if (err) throw err;
         const regex =
-          /\n\s*const cs142models = require\('\.\/modelData\/photoApp\.js'\)\.cs142models;/g;
+          /\n\s*const models = require\('\.\/modelData\/photoApp\.js'\)\.models;/g;
         assert(
           !data.toString().match(regex),
-          "webServer still contains reference to cs142 models."
+          "webServer still contains reference to models."
         );
         done();
       });
@@ -63,7 +63,7 @@ describe("CS142 Photo App: Web API Tests", function () {
 
   describe("test /user/list", function (done) {
     let userList;
-    const cs142Users = cs142models.userListModel();
+    const Users = models.userListModel();
 
     it("can get the list of user", function (done) {
       http.get(
@@ -97,13 +97,13 @@ describe("CS142 Photo App: Web API Tests", function () {
     });
 
     it("has the correct number elements", function (done) {
-      assert.strictEqual(userList.length, cs142Users.length);
+      assert.strictEqual(userList.length, Users.length);
       done();
     });
 
     it("has an entry for each of the users", function (done) {
       async.each(
-        cs142Users,
+        Users,
         function (realUser, callback) {
           const user = _.find(userList, {
             first_name: realUser.first_name,
@@ -139,7 +139,7 @@ describe("CS142 Photo App: Web API Tests", function () {
 
   describe("test /user/:id", function (done) {
     let userList;
-    const cs142Users = cs142models.userListModel();
+    const Users = models.userListModel();
 
     it("can get the list of user", function (done) {
       http.get(
@@ -169,7 +169,7 @@ describe("CS142 Photo App: Web API Tests", function () {
 
     it("can get each of the user detail with /user/:id", function (done) {
       async.each(
-        cs142Users,
+        Users,
         function (realUser, callback) {
           const user = _.find(userList, {
             first_name: realUser.first_name,
@@ -246,7 +246,7 @@ describe("CS142 Photo App: Web API Tests", function () {
 
   describe("test /photosOfUser/:id", function (done) {
     let userList;
-    const cs142Users = cs142models.userListModel();
+    const Users = models.userListModel();
 
     it("can get the list of user", function (done) {
       http.get(
@@ -276,7 +276,7 @@ describe("CS142 Photo App: Web API Tests", function () {
 
     it("can get each of the user photos with /photosOfUser/:id", function (done) {
       async.each(
-        cs142Users,
+        Users,
         function (realUser, callback) {
           // validate the the user is in the list once
           const user = _.find(userList, {
@@ -315,7 +315,7 @@ describe("CS142 Photo App: Web API Tests", function () {
                 );
                 photos = JSON.parse(responseBody);
 
-                const real_photos = cs142models.photoOfUserModel(realUser._id);
+                const real_photos = models.photoOfUserModel(realUser._id);
 
                 assert.strictEqual(
                   real_photos.length,
