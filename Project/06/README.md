@@ -111,7 +111,7 @@ In particular, any time you call `FetchModel` in `photoShare.jsx` or your other 
 
 Here are some hints for making the switch to `axios`:
 
-- In any components fetching data using `axio`s, be sure to import it as follows:
+- In any components fetching data using `axios`, be sure to import it as follows:
 
 ```javascript
 import axios from 'axios';
