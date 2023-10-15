@@ -147,6 +147,21 @@ In addition, your code and templates must be clean and readable. Remember to run
 
 ## Deliverables
 
-Use the standard class [submission mechanism](https://github.com/btdobbs/WA/tree/main/Project/00) to submit `project6`. Make sure your code is free of any lint warnings and passes the provided test suite.
+Use the standard [submission mechanism](https://github.com/btdobbs/WA/tree/main/Project/00) mechanism to submit.
+
+Your respository should include the following updated files.
+
+- ./webServer.js
+- ./components/topBar/TopBar.css
+- ./components/topBar/TopBar.jsx
+- ./components/userDetail/userDetail.css
+- ./components/userDetail/userDetail.jsx
+- ./components/userList/userList.css
+- ./components/userList/userList.jsx
+- ./components/userPhotos/userPhotos.css
+- ./components/userPhotos/userPhotos.jsx
+- ./schema/photo.js
+- ./schema/user.js
+- ./styles/main.css
 
 [^1]: [Stanford Computer Science](https://cs.stanford.edu)
