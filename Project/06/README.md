@@ -149,7 +149,7 @@ In addition, your code and templates must be clean and readable. Remember to run
 
 Use the standard [submission mechanism](https://github.com/btdobbs/WA/tree/main/Project/00) mechanism to submit.
 
-Your respository should include the following updated files.
+Your respository should include the following updated files.  If extra credit is attempted, your `README.md` file should have notes regarding the component files to download.
 
 - ./webServer.js
 - ./components/topBar/TopBar.css
