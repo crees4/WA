@@ -227,7 +227,7 @@ describe("Photo App: Web API Tests", function () {
         {
           hostname: host,
           port: port,
-          path: "/user/1",
+          path: "/user/6528caac38bad49b8eceed6a",
         },
         function (response) {
           let responseBody = "";
@@ -410,7 +410,7 @@ describe("Photo App: Web API Tests", function () {
         {
           hostname: host,
           port: port,
-          path: "/photosOfUser/1",
+          path: "/photosOfUser/6528caac38bad49b8eceed6a",
         },
         function (response) {
           let responseBody = "";
