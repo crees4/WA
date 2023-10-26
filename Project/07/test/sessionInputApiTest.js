@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Mocha test of CS142 Project 7 web server session and input API. Run using
+ * Mocha test of Project 7 web server session and input API. Run using
  * this command:
  *   node_modules/.bin/mocha sessionInputApiTest.js
  */
@@ -35,7 +35,7 @@ function removeMongoProperties(model) {
   return copy;
 }
 
-describe("CS142 Photo App: Session and Input API Tests", function () {
+describe("Photo App: Session and Input API Tests", function () {
   let sessionCookie;
   describe("test /admin/login and /admin/logout", function (done) {
     it("errors getting the list of user if not logged in", function (done) {
