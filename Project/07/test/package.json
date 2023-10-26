@@ -17,5 +17,8 @@
     "test": "mocha serverApiTest.js sessionInputApiTest.js"
   },
   "author": "Mendel Rosenblum <mendel@cs.stanford.edu> (http://www.stanford.edu/~mendel)",
+  "contributors": [
+    "Todd Dobbs <btdobbs@uncc.edu> (https://orcid.org/0000-0001-6711-6962)"
+  ],
   "license": "ISC"
 }
