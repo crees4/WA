@@ -160,8 +160,6 @@ Your respository should include the following updated files.  If extra credit is
 - ./components/userList/userList.jsx
 - ./components/userPhotos/userPhotos.css
 - ./components/userPhotos/userPhotos.jsx
-- ./schema/photo.js
-- ./schema/user.js
 - ./styles/main.css
 
 [^1]: [Stanford Computer Science](https://cs.stanford.edu)
