@@ -111,7 +111,7 @@ Once you have implemented user login, the next step is to implement the ability 
 
 For the backend support extend the web server API with the following HTTP POST API:
 
-- `/commentsOfPhoto/:photo_id - Add a comment to the photo whose id is `photo_id`. The body of the POST requests should be a JSON-encoded body with a single property `comment` that contains the comment's text. The comment object created on the photo must include the identifier of the logged in user and the time when the comment was created. Your implementation should reject any empty comments with a status of 400 (Bad request).
+- `/commentsOfPhoto/:photo_id` - Add a comment to the photo whose id is `photo_id`. The body of the POST requests should be a JSON-encoded body with a single property `comment` that contains the comment's text. The comment object created on the photo must include the identifier of the logged in user and the time when the comment was created. Your implementation should reject any empty comments with a status of 400 (Bad request).
 
 ## Problem 3: Photo Uploading
 
