@@ -88,7 +88,7 @@ After updating your Photo Share App with the new files from Project 7 and starti
 
 ## Problem 1: Simple Login
 
-Extend your photo app to have the notion of a user being logged in. If a user is logged in, the toolbar should include a small message "Hi <firstname>" where <firstname> is the first name of the logged-in user. The toolbar should also contain a button displaying "Logout" that will log the user out.
+Extend your photo app to have the notion of a user being logged in. If a user is logged in, the toolbar should include a small message "Hi `<firstname>`" where `<firstname>` is the first name of the logged-in user. The toolbar should also contain a button displaying "Logout" that will log the user out.
 
 If there is no user logged in, the toolbar should display "Please Login" and the main view of your application should display a new view component named `LoginRegister`. The `LoginRegister` view should provide a way for a user to login and, as part of Problem 4 below, register as a new user. All attempts to navigate to a different view (e.g., deep links) should result in the display being redirected to the `LoginRegister` view if no user is logged in. (See the hints section if you are unsure how to implement this.) In addition, the user list on the left should not be populated if the current user is not logged in. (See the section below about modifying the server endpoints to return a status of 401 (Unauthorized).)
 
