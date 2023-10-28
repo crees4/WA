@@ -172,7 +172,7 @@ and
 function doesPasswordMatch(hash, salt, clearTextPassword) {
 ```
 
-We provide a Mocha test file `test/passwordTest.js` that tests this interface. Please make sure that you pass the tests within this file before submitting. You will need to change the package.json scripts test line to mocha serverApiTest.js sessionInputApiTest.js passwordTest.js` so that running `npm test` runs these tests too. Changing this line also serves as indication that you've done this extra credit. You will also need to update the `loadDatabase.js` script to require `password.js` and use it to generate the correct password properties in the new user objects that the script creates.
+We provide a Mocha test file `test/passwordTest.js` that tests this interface. Please make sure that you pass the tests within this file before submitting. You will need to change the `package.json` scripts test line to `mocha serverApiTest.js sessionInputApiTest.js passwordTest.js` so that running `npm test` runs these tests too. Changing this line also serves as indication that you've done this extra credit. You will also need to update the `loadDatabase.js` script to require `password.js` and use it to generate the correct password properties in the new user objects that the script creates.
 
 ## Extra Credit #2: Handle Browser Refresh
 
