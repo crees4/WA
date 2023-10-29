@@ -41,7 +41,6 @@ Finally you need to add the `express-session` and `body-parser` middleware to ex
 
 ```js
 app.use(session({secret: "secretKey", resave: false, saveUninitialized: false}));
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 ```
 
