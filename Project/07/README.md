@@ -273,7 +273,7 @@ Express using body-parser can not handle a POST request with form containing a f
 const processFormBody = multer({storage: multer.memoryStorage()}).single('uploadedphoto');
 ```
 
-`processFormBody` is a function we can use in our post request handler for `/photos/new`. `processFormBody` will look at the form for a field named "uploadedphoto" and pull the file out of it and place the information is a property named `file` on the request object. The following code gives you an idea of how to call it in your post request handler:
+`processFormBody` is a function we can use in our post request handler for `/photos/new`. `processFormBody` will look at the form for a field named "uploadedphoto" and pull the file out of it and place the information in a property named `file` on the request object. The following code gives you an idea of how to call it in your post request handler:
 
 ```js
 processFormBody(request, response, function (err) {
