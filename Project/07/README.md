@@ -319,4 +319,31 @@ This problem combines the techniques you needed for the previous problems.
 
 Use the standard class [submission mechanism](https://github.com/btdobbs/WA/tree/main/Project/00) mechanism to submit `project7`. Please clean up your project directory before submitting, as described in the submission instructions. In addition delete any images you uploaded into your images directory. If you kept the same naming convention for uploaded images that we had in the hints section, you can delete them running the command `rm -f images/U*` from your `project7` directory.
 
+Your respository should include the following updated files.  If extra credit is attempted, your `README.md` file should have notes regarding the component files to download.
+
+### ./
+- package.json
+- photoShare.jsx
+- webServer.js
+### ./components/loginRegister:
+- loginRegister.css
+- loginRegister.jsx
+### ./components/topBar:
+- TopBar.css
+- TopBar.jsx
+### ./components/userDetail:
+- userDetail.css
+- userDetail.jsx
+### ./components/userList:
+- userList.css
+- userList.jsx
+### ./components/userPhotos:
+- userPhotos.css
+- userPhotos.jsx
+### ./schema:
+- user.js
+### ./styles:
+- main.css
+
+
 [^1]: [Stanford Computer Science](https://cs.stanford.edu)
